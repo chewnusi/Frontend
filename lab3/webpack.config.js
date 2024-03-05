@@ -6,11 +6,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 function generateHtmlPlugins(dir) {
   const files = fs.readdirSync(path.resolve(__dirname, dir));
-  return files.filter(file => path.extname(file).toLowerCase() === '.html')
-              .map(file => new HtmlWebpackPlugin({
-                filename: file,
-                template: path.resolve(__dirname, dir, file)
-              }));
+  return files
+    .filter(file => path.extname(file).toLowerCase() === '.html')
+    .map(file => new HtmlWebpackPlugin({
+      filename: path.join('pages', file), // Save in 'pages' folder
+      template: path.resolve(__dirname, dir, file)
+    }));
 }
 
 module.exports = {
