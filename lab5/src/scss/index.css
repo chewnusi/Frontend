@@ -1,0 +1,153 @@
+@import 'reset.css';
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(to bottom, #7c005a , #df64bd);
+    filter: contrast(1) saturate(0.65);
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+  
+h1 {
+    font-size: 30px;
+    text-shadow: 1px 1px #7c005a, -3px 0 4px #000;
+    color: #df64bd;
+    padding:16px;
+    text-align:center;
+    margin:16px;
+}
+
+h2 {
+    font-size: 25px;
+    text-shadow: 1px 1px #7c005a, -3px 0 4px #000;
+    color: #df64bd;
+    padding:14px;
+    text-align:center;
+    margin:14px;
+}
+
+h3 {
+    font-size: 22px;
+    text-shadow: -1px -1px #df64bd, 1px 1px #7c005a, -1px 0 4px #000;
+    color: #8f2471;
+    padding:14px;
+    text-align:left;
+    margin:14px;
+}
+
+ol li{
+    list-style-type: none;
+    list-style-type: decimal; 
+}
+
+ul li{
+    list-style-type: none;
+    list-style-type: disc; 
+}
+
+ul, ol {
+    padding-left: 55px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #df64bd; 
+    text-decoration: none; 
+    transition: color 0.2s ease; 
+}
+
+a:hover {
+    color: #7c005a; 
+}  
+
+footer a{
+    color: #7c005a; 
+    text-decoration: none; 
+    transition: color 0.2s ease; 
+}
+
+footer a:hover{
+    color: #ffb9eb; 
+}
+
+header figure img {
+    border-radius: 10%; 
+    border: 2px solid #DF38B1; 
+    margin-bottom: 10px;
+}
+
+img {
+    margin-top: 25px;
+    border: 2px solid #be008a; 
+    margin-bottom: 10px;
+}
+
+figure figcaption {
+    padding-left: 60px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+p {
+    text-indent: 25px; 
+}
+
+blockquote {
+    margin: 0;
+    padding: 10px;
+    padding-left: 70px;
+    font-size: 17px;
+    font-style: italic;
+}
+
+small {
+    font-size: 14px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+article {
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%; 
+    margin: 0 auto;
+    margin-bottom: 35px;
+    border: 2px solid #7c005a;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 2px solid #7c005a;
+    border-left: 2px solid #7c005a;
+}
+
+th:hover,
+td:hover {
+    background-color: #DF38B1; 
+    color: #FFFFFF; 
+}
