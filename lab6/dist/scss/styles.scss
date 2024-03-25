@@ -1,0 +1,160 @@
+@import 'reset.css';
+
+$dark1: #7c005a;
+$dark2: #8f2471;
+$dark3: #df64bd;
+$dark4: #ffb9eb;
+$additional: #be008a;
+
+$base-font-family: Georgia, 'Times New Roman', Times, serif;
+$base-font-size: 18px;
+$padding: 14px;
+
+@mixin text-shadow($color) {
+  text-shadow: 1px 1px $color, -3px 0 4px #000;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  max-width: 900px;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(to bottom, $dark1, $dark3);
+    filter: contrast(1) saturate(0.65);
+  }
+}
+  
+h1 {
+    font-size: calc(#{$base-font-size} * 2 - 6px);
+    color: $dark3;
+    padding: calc(#{$base-font-size} - 2px);
+    text-align:center;
+    margin: calc(#{$padding} + 2px);
+    @include text-shadow($dark1);
+}
+
+h2 {
+    font-size: calc(#{$base-font-size} + 7px);
+    color: $dark3;
+    padding: $padding;
+    text-align:center;
+    margin: $padding;
+    @include text-shadow($dark1);
+}
+
+h3 {
+    font-size: calc(#{$base-font-size} + 4px);
+    text-shadow: -1px -1px $dark3, 1px 1px $dark1, -1px 0 4px #000;
+    color: $dark2;
+    padding:$padding;
+    text-align:left;
+    margin:$padding;
+}
+
+ol, ul {
+  padding-left: calc(#{$padding} * 4);
+  margin-bottom: calc(#{$padding} + 6px);
+
+  li {
+    list-style-type: disc;
+  }
+}
+
+a {
+  color: $dark3;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $dark1;
+  }
+}
+
+footer a {
+  color: $dark1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $dark4;
+  }
+}
+
+img {
+  margin-top: 25px;
+  border: 2px solid $additional;
+  margin-bottom: calc(#{$padding} - 4px);
+}
+
+header figure img {
+  border-radius: 10%;
+  border: 2px solid $dark3;
+  margin-bottom: calc(#{$padding} - 4px);
+}
+
+figure figcaption {
+    padding-left: 60px;
+    font-size: calc(#{$base-font-size} - 4px);
+    margin-bottom: $padding;
+}
+
+p {
+    text-indent: 25px; 
+}
+
+blockquote {
+    margin: 0;
+    padding: calc(#{$padding} - 4px);
+    padding-left: calc(#{$padding}*5);
+    font-size: $base-font-size;
+    font-style: italic;
+}
+
+small {
+    font-size: calc(#{$base-font-size} - 4px);
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+article {
+    margin-bottom: $padding;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  border: 2px solid $dark1;
+  border-collapse: collapse;
+  font-size: calc(#{$base-font-size} - 2px);
+
+  th, td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 2px solid $dark1;
+    border-left: 2px solid $dark1;
+
+    &:hover {
+      background-color: $dark3;
+      color: #fff;
+    }
+  }
+}
